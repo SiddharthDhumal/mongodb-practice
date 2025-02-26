@@ -36,18 +36,18 @@ app.use(helmet());
 app.use("/api", limiter);
 app.use(mongoSanitize());
 app.use(xss());
-app.use(
-	hpp({
-		whitelist: [
-			"duration",
-			"ratingsQuantity",
-			"ratingsAverage",
-			"maxGroupSize",
-			"difficulty",
-			"price",
-		],
-	})
-);
+// app.use(
+// 	hpp({
+// 		whitelist: [
+// 			"duration",
+// 			"ratingsQuantity",
+// 			"ratingsAverage",
+// 			"maxGroupSize",
+// 			"difficulty",
+// 			"price",
+// 		],
+// 	})
+// );
 
 app.use(compression());
 
